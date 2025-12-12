@@ -12,16 +12,16 @@
   }
 
   const items: Item[] = [
-    { title: "In-app widgets for collecting feedback", status: "Planned", votes: 55, date: "Nov 21", color: "blue" },
-    { title: "Linear Integration", status: "In Progress", votes: 42, date: "Nov 22", color: "purple" },
-    { title: "Webhooks", status: "Reviewing", votes: 23, date: "Nov 23", color: "yellow" },
-    { title: "Post on behalf of a user", status: "Reviewing", votes: 12, date: "Dec 28", color: "yellow" },
-    { title: "Kanban View for Roadmap", status: "Pending", votes: 11, date: "Nov 24", color: "gray" },
-    { title: "Public API for changelog", status: "Planned", votes: 9, date: "Feb 21", color: "blue" },
-    { title: "Display links as links in the comments", status: "Completed", votes: 8, date: "Jan 13", color: "green" },
-    { title: "Github Issues Integration", status: "Closed", votes: 5, date: "Jun 19", color: "gray" },
-    { title: "Disable self-registration", status: "Pending", votes: 5, date: "Jan 11", color: "gray" },
-    { title: "Enable SSO", status: "Pending", votes: 1, date: "Feb 11", color: "gray" },
+    { title: "Stripe payment automation", status: "Active", votes: 142, date: "Nov 21", color: "green" },
+    { title: "AI model deployment pipeline", status: "Active", votes: 98, date: "Nov 22", color: "green" },
+    { title: "Webhook event processor", status: "Active", votes: 76, date: "Nov 23", color: "green" },
+    { title: "Email notification workflow", status: "Testing", votes: 45, date: "Dec 28", color: "yellow" },
+    { title: "Data sync automation", status: "Active", votes: 34, date: "Nov 24", color: "green" },
+    { title: "Slack integration workflow", status: "Testing", votes: 28, date: "Feb 21", color: "yellow" },
+    { title: "Customer onboarding sequence", status: "Active", votes: 23, date: "Jan 13", color: "green" },
+    { title: "Report generation automation", status: "Draft", votes: 12, date: "Jun 19", color: "gray" },
+    { title: "API rate limiter", status: "Failed", votes: 8, date: "Jan 11", color: "gray" },
+    { title: "Database backup workflow", status: "Draft", votes: 5, date: "Feb 11", color: "gray" },
   ];
 
   const colorClasses: Record<Color, string> = {
@@ -46,12 +46,12 @@
     
     <!-- Headline -->
     <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6 leading-tight max-w-5xl mx-auto">
-      Collect feedback <span class="inline-block align-middle text-4xl md:text-5xl">💬</span> prioritize with votes <span class="inline-block align-middle text-4xl md:text-5xl">🗳️</span> auto-sync your roadmap, and <span class="inline-block align-middle text-4xl md:text-5xl">💥</span> keep users engaged automatically
+      Transform complex workflows into simple automations with visual logic builders
     </h1>
     
     <!-- Subheadline -->
     <p class="text-xl text-gray-500 mb-10 max-w-3xl mx-auto leading-relaxed">
-      UserJot is the complete feedback platform for SaaS teams. Beautiful feedback boards that organize ideas, roadmaps that sync automatically, changelogs that write themselves, and engagement loops that run themselves.
+      Macadamia makes workflow automation accessible to everyone. Build powerful automations with drag-and-drop logic, connect to your favorite tools with pre-built integrations, and deploy AI models at scale—no coding required.
     </p>
     
     <!-- CTA -->
@@ -67,15 +67,15 @@
       <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-gray-500">
         <div class="flex items-center gap-1.5">
           <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Free forever
+          No code required
         </div>
         <div class="flex items-center gap-1.5">
           <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          30-second setup
+          Pre-built integrations
         </div>
         <div class="flex items-center gap-1.5">
           <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Unlimited users
+          Deploy in minutes
         </div>
       </div>
     </div>
@@ -97,50 +97,46 @@
           <div class="w-64 bg-white border-r border-gray-200 flex flex-col flex-shrink-0">
             <div class="p-4 border-b border-gray-100">
               <div class="flex items-center gap-2">
-                <div class="w-6 h-6 bg-black rounded text-white flex items-center justify-center text-xs font-bold">U</div>
-                <div class="text-sm font-semibold">UserJot <span class="text-xs font-normal text-gray-400 block">Pro Plan</span></div>
+                <div class="w-6 h-6 bg-primary-600 rounded text-white flex items-center justify-center text-xs font-bold">M</div>
+                <div class="text-sm font-semibold">Macadamia <span class="text-xs font-normal text-gray-400 block">Pro Plan</span></div>
                 <svg class="ml-auto w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
               </div>
             </div>
             
             <div class="p-3">
               <button class="w-full flex items-center justify-center gap-2 bg-white border border-gray-200 rounded-md py-1.5 text-sm font-medium text-gray-600 shadow-sm mb-6">
-                Create Request <span class="text-gray-400">+</span>
+                Create Workflow <span class="text-gray-400">+</span>
               </button>
               
               <div class="space-y-6">
                 <div>
-                  <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 px-2">Requests</div>
+                  <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 px-2">Workflows</div>
                   <div class="space-y-0.5">
                     <div class="flex items-center justify-between px-2 py-1.5 text-sm text-gray-600 hover:bg-gray-50 rounded cursor-pointer">
-                      <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full border border-gray-300"></div> Pending</div>
-                      <span class="text-gray-400 text-xs">45</span>
+                      <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full border border-gray-300"></div> Draft</div>
+                      <span class="text-gray-400 text-xs">8</span>
                     </div>
                     <div class="flex items-center justify-between px-2 py-1.5 text-sm text-gray-600 hover:bg-gray-50 rounded cursor-pointer">
-                      <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-yellow-400"></div> Reviewing</div>
-                      <span class="text-gray-400 text-xs">13</span>
+                      <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-yellow-400"></div> Testing</div>
+                      <span class="text-gray-400 text-xs">5</span>
+                    </div>
+                    <div class="flex items-center justify-between px-2 py-1.5 text-sm text-gray-600 bg-gray-50 rounded cursor-pointer">
+                      <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-green-400"></div> Active</div>
+                      <span class="text-gray-400 text-xs">42</span>
                     </div>
                     <div class="flex items-center justify-between px-2 py-1.5 text-sm text-gray-600 hover:bg-gray-50 rounded cursor-pointer">
-                      <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-blue-400"></div> Planned</div>
-                      <span class="text-gray-400 text-xs">28</span>
+                      <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-red-400"></div> Failed</div>
+                      <span class="text-gray-400 text-xs">2</span>
                     </div>
                     <div class="flex items-center justify-between px-2 py-1.5 text-sm text-gray-600 hover:bg-gray-50 rounded cursor-pointer">
-                      <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-purple-400"></div> In Progress</div>
-                      <span class="text-gray-400 text-xs">4</span>
-                    </div>
-                    <div class="flex items-center justify-between px-2 py-1.5 text-sm text-gray-600 hover:bg-gray-50 rounded cursor-pointer">
-                      <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-green-400"></div> Completed</div>
-                      <span class="text-gray-400 text-xs">80</span>
-                    </div>
-                    <div class="flex items-center justify-between px-2 py-1.5 text-sm text-gray-600 hover:bg-gray-50 rounded cursor-pointer">
-                      <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-gray-400"></div> Closed</div>
-                      <span class="text-gray-400 text-xs">30</span>
+                      <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-gray-400"></div> Archived</div>
+                      <span class="text-gray-400 text-xs">15</span>
                     </div>
                   </div>
                 </div>
                 
                 <div>
-                  <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 px-2">Services</div>
+                  <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 px-2">Templates</div>
                   <div class="space-y-0.5">
                     <div class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-600 hover:bg-gray-50 rounded cursor-pointer">
                       <svg class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0121 18.382V7.618a1 1 0 01-1.447-.894L15 7m0 13V7"/></svg>
@@ -160,7 +156,7 @@
           <div class="flex-1 flex flex-col bg-white">
             <div class="h-16 border-b border-gray-100 flex items-center justify-between px-6">
               <div class="flex items-center gap-4">
-                <h2 class="text-lg font-semibold text-gray-900">Requests</h2>
+                <h2 class="text-lg font-semibold text-gray-900">Workflows</h2>
                 <div class="flex items-center gap-2 text-sm text-gray-500 bg-gray-50 px-2 py-1 rounded border border-gray-200">
                   <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/></svg>
                   1 Filter
@@ -185,10 +181,10 @@
                 <thead class="bg-gray-50 text-xs font-medium text-gray-500 uppercase tracking-wider">
                   <tr>
                     <th class="px-6 py-3 border-b border-gray-100 w-12"></th>
-                    <th class="px-6 py-3 border-b border-gray-100">Title</th>
+                    <th class="px-6 py-3 border-b border-gray-100">Workflow Name</th>
                     <th class="px-6 py-3 border-b border-gray-100">Status</th>
-                    <th class="px-6 py-3 border-b border-gray-100">Votes</th>
-                    <th class="px-6 py-3 border-b border-gray-100 text-right">Date</th>
+                    <th class="px-6 py-3 border-b border-gray-100">Runs</th>
+                    <th class="px-6 py-3 border-b border-gray-100 text-right">Created</th>
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100">

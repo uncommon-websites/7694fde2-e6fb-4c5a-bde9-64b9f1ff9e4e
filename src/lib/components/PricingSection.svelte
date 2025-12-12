@@ -1,8 +1,8 @@
 <section id="pricing" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="mb-16">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Pricing that doesn't punish growth</h2>
-      <p class="text-gray-500 max-w-3xl">Unlimited users on every plan. Because charging per user for a feedback tool is like charging per customer for a store. It's backwards.</p>
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Simple pricing for indie hackers</h2>
+      <p class="text-gray-500 max-w-3xl">Start free, scale as you grow. No hidden fees, no per-execution pricing that punishes success. Just straightforward plans that make sense.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">

@@ -17,122 +17,122 @@
   import MockupRoadmap from '$lib/components/MockupRoadmap.svelte';
   import MockupChangelog from '$lib/components/MockupChangelog.svelte';
 
-  const feedbackFeatures = [
+  const visualBuilderFeatures = [
     {
-      title: "Upvoting & reactions",
-      description: "Users vote on what they want, best ideas rise to the top",
-      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`,
-      iconColor: "text-red-500",
-      iconBg: "bg-red-50"
+      title: "Drag-and-drop interface",
+      description: "Build complex workflows visually without writing code",
+      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/></svg>`,
+      iconColor: "text-primary-600",
+      iconBg: "bg-primary-50"
     },
     {
-      title: "AI duplicate detection",
-      description: "Shows similar ideas as users type, consolidating votes",
-      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+      title: "Conditional logic",
+      description: "Create smart workflows with if/then conditions and branches",
+      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
       iconColor: "text-purple-500",
       iconBg: "bg-purple-50"
     },
     {
-      title: "Auto-categorization",
-      description: "AI automatically tags and organizes by feature area",
-      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>`,
+      title: "Real-time testing",
+      description: "Test workflows instantly with live data preview",
+      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
       iconColor: "text-blue-500",
       iconBg: "bg-blue-50"
     },
     {
-      title: "Discussion threads",
-      description: "Users discuss ideas, add context, and refine together",
-      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>`,
+      title: "Version control",
+      description: "Track changes, rollback easily, and collaborate safely",
+      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
       iconColor: "text-green-500",
       iconBg: "bg-green-50"
     },
     {
-      title: "Guest & anonymous",
-      description: "Let anyone submit feedback without creating an account",
-      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>`,
+      title: "Error handling",
+      description: "Built-in retry logic and failure notifications",
+      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>`,
       iconColor: "text-orange-500",
       iconBg: "bg-orange-50"
     },
     {
-      title: "Private boards",
-      description: "Create internal boards for sensitive customer feedback",
-      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>`,
+      title: "Custom variables",
+      description: "Store and reuse data across workflow steps",
+      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>`,
       iconColor: "text-indigo-500",
       iconBg: "bg-indigo-50"
     },
     {
-      title: "Powerful search",
-      description: "Semantic search finds ideas even with different wording",
-      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+      title: "Scheduled triggers",
+      description: "Run workflows on a schedule or based on events",
+      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>`,
       iconColor: "text-teal-500",
       iconBg: "bg-teal-50"
     },
     {
-      title: "In-app widget",
-      description: "Embed feedback collection directly in your product",
-      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+      title: "Monitoring dashboard",
+      description: "Track performance, errors, and execution history",
+      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>`,
       iconColor: "text-pink-500",
       iconBg: "bg-pink-50"
     }
   ];
 
-  const roadmapFeatures = [
+  const integrationFeatures = [
     {
-      title: "Status-based updates",
-      description: "Roadmap auto-syncs when feedback status changes",
-      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>`,
+      title: "Stripe payments",
+      description: "Process payments, handle webhooks, manage subscriptions",
+      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>`,
       iconColor: "text-purple-500",
       iconBg: "bg-purple-50"
     },
     {
-      title: "Vote visibility",
-      description: "Show critical features have the most customer demand",
-      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>`,
+      title: "Webhook automation",
+      description: "Trigger workflows from any webhook event",
+      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
       iconColor: "text-blue-500",
       iconBg: "bg-blue-50"
     },
     {
-      title: "Progress notifications",
-      description: "Notify users when feedback moves between statuses",
-      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>`,
+      title: "Email & SMS",
+      description: "Send notifications via SendGrid, Twilio, and more",
+      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
       iconColor: "text-green-500",
       iconBg: "bg-green-50"
     },
     {
-      title: "In-app roadmap",
-      description: "Embed in your app to reduce \"when will this ship?\" tickets",
-      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+      title: "Database connectors",
+      description: "Connect to PostgreSQL, MongoDB, MySQL, and more",
+      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>`,
       iconColor: "text-orange-500",
       iconBg: "bg-orange-50"
     }
   ];
 
-  const changelogFeatures = [
+  const aiModelFeatures = [
     {
-      title: "AI writes everything",
-      description: "Writes posts, generates titles, tags, and schedules publishing",
-      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+      title: "One-click deployment",
+      description: "Deploy ML models to production with a single click",
+      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
       iconColor: "text-green-500",
       iconBg: "bg-green-50"
     },
     {
-      title: "Auto-pull feedback",
-      description: "AI surfaces closed feedback and writes changelog entries",
-      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>`,
+      title: "Auto-scaling",
+      description: "Automatically scale based on demand and usage patterns",
+      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>`,
       iconColor: "text-blue-500",
       iconBg: "bg-blue-50"
     },
     {
-      title: "Smart notifications",
-      description: "Auto-email everyone who voted on shipped features",
-      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>`,
+      title: "Performance monitoring",
+      description: "Track latency, throughput, and model accuracy in real-time",
+      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>`,
       iconColor: "text-orange-500",
       iconBg: "bg-orange-50"
     },
     {
-      title: "In-app changelog",
-      description: "New update indicator appears in widget when you publish",
-      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+      title: "Version management",
+      description: "Deploy multiple versions and A/B test models easily",
+      icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/></svg>`,
       iconColor: "text-pink-500",
       iconBg: "bg-pink-50"
     }
@@ -147,11 +147,11 @@
   
   <div id="product">
     <FeatureSection 
-      tag="Customer Feedback Platform" 
-      tagColor="text-red-500"
-      headline="Beautiful feedback boards where great ideas are born"
-      description="Give your users a dedicated space to share ideas, vote on features they want, and see what you're building. Our AI-powered boards organize feedback automatically, detect duplicates, and help you discover what really matters to your customers."
-      features={feedbackFeatures}
+      tag="Visual Workflow Builder" 
+      tagColor="text-primary-600"
+      headline="Build complex workflows with drag-and-drop simplicity"
+      description="Transform your ideas into powerful automations without writing a single line of code. Our visual logic builder makes it easy to create sophisticated workflows with conditional logic, error handling, and real-time testing—all in an intuitive interface."
+      features={visualBuilderFeatures}
     >
       <div slot="image">
         <MockupFeedback />
@@ -159,12 +159,12 @@
     </FeatureSection>
 
     <FeatureSection 
-      tag="Product Roadmap Software" 
+      tag="Pre-Built Integrations" 
       tagColor="text-purple-500"
-      headline="A product roadmap that updates itself automatically"
-      description="Never update a spreadsheet again. Change feedback status → roadmap reflects it instantly. Show users what's coming and keep them engaged."
-      features={roadmapFeatures}
-      quote="Your roadmap becomes a living document that builds trust. Users see you're actively working on their requests, reducing churn and increasing engagement."
+      headline="Connect to your favorite tools in seconds"
+      description="Stop worrying about API documentation and webhook configurations. Our pre-built integrations for Stripe, SendGrid, Twilio, and major databases work out of the box. Just authenticate and start automating."
+      features={integrationFeatures}
+      quote="We built the integrations that indie hackers and SaaS founders actually need. No enterprise bloat, just the essentials that help you ship faster."
     >
       <div slot="image">
         <MockupRoadmap />
@@ -172,11 +172,11 @@
     </FeatureSection>
 
     <FeatureSection 
-      tag="Product Changelog Software" 
+      tag="AI Model Deployment" 
       tagColor="text-green-500"
-      headline="AI-powered changelog that writes, schedules, and notifies"
-      description="The most advanced changelog tool: AI writes your posts, pulls in shipped feedback, and notifies the right users automatically. Collaborate with your team and keep customers engaged—no manual work."
-      features={changelogFeatures}
+      headline="Deploy and scale ML models without DevOps headaches"
+      description="From prototype to production in one click. Macadamia handles the infrastructure, auto-scaling, monitoring, and optimization so you can focus on building great AI products. Scale to 100K models effortlessly."
+      features={aiModelFeatures}
     >
       <div slot="image">
         <MockupChangelog />
